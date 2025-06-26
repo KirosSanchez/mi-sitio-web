@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyectos - Rodinet</title>
+    <title>Proyectos | Rodinet</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <!-- Barra de Navegación -->
@@ -23,44 +24,93 @@
         </div>
     </nav>
 
-    <!-- Sección de Proyectos con Galería Moderna -->
+    <!-- Sección de Proyectos (Galería con slider) -->
     <section id="proyectos">
-        <div class="proyectos-titulo">
+        <div class="proyectos-contenedor">
             <h2>Galería de Proyectos</h2>
-            <p>Descubre nuestros trabajos recientes y cómo podemos transformar tu espacio con nuestros muebles a medida.</p>
+            <p>Explora nuestros trabajos, diseñados especialmente para ti. Cada proyecto refleja la calidad y el diseño único de nuestros muebles a medida.</p>
         </div>
 
-        <div class="proyectos-contenedor">
-            <div class="proyecto-card">
-                <img src="images/proyecto1.jpg" alt="Proyecto 1">
-                <div class="proyecto-info">
-                    <h3>Proyecto Moderno</h3>
-                    <p>Diseño exclusivo de un espacio funcional para la oficina.</p>
+        <!-- Slider de Imágenes -->
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <img src="images/closet.jpg" alt="Proyecto 1" class="slide-img">
+                    <div class="slide-text">
+                        <h3>Clósets a Medida</h3>
+                        <p>Diseños exclusivos para tu espacio, adaptados a tus necesidades.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/muebles-cocina.jpg" alt="Proyecto 2" class="slide-img">
+                    <div class="slide-text">
+                        <h3>Muebles para Cocina</h3>
+                        <p>Innovación y funcionalidad en cada mueble de cocina que creamos.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/muebles-bano.jpg" alt="Proyecto 3" class="slide-img">
+                    <div class="slide-text">
+                        <h3>Muebles de Baño</h3>
+                        <p>Soluciones personalizadas para optimizar el espacio en tu baño.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/muebles-sala.jpg" alt="Proyecto 4" class="slide-img">
+                    <div class="slide-text">
+                        <h3>Muebles de Sala</h3>
+                        <p>Diseños modernos que se ajustan perfectamente a tu sala.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controles del Slider -->
+        <div class="slider-controls">
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <section id="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo-rodinet.jpg" alt="Rodinet Logo">
+            </div>
+
+            <div class="footer-info">
+                <h3>Rodinet</h3>
+                <p>Creado por ti y para ti, nuestros productos harán que tu vida diaria sea más fácil y moderna.</p>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Información de Contacto</h4>
+                <p>Rodinet S.A.</p>
+                <p>Calle Ficticia 123</p>
+                <p>Ciudad, País</p>
+                <p>Tel: 123 456 789</p>
+                <p>Email: contacto@rodinet.com</p>
+            </div>
+
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/rodinet">
+                        <img src="images/facebook-icon.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/rodinet">
+                        <img src="images/instagram-icon.png" alt="Instagram">
+                    </a>
                 </div>
             </div>
 
-            <div class="proyecto-card">
-                <img src="images/proyecto2.jpg" alt="Proyecto 2">
-                <div class="proyecto-info">
-                    <h3>Muebles para Cocina</h3>
-                    <p>Reformas de cocina con muebles personalizados.</p>
-                </div>
-            </div>
-
-            <div class="proyecto-card">
-                <img src="images/proyecto3.jpg" alt="Proyecto 3">
-                <div class="proyecto-info">
-                    <h3>Espacio Minimalista</h3>
-                    <p>Creación de un ambiente moderno y elegante para el hogar.</p>
-                </div>
-            </div>
-
-            <div class="proyecto-card">
-                <img src="images/proyecto4.jpg" alt="Proyecto 4">
-                <div class="proyecto-info">
-                    <h3>Diseño de Sala</h3>
-                    <p>Elegante diseño de muebles para una sala espaciosa y cómoda.</p>
-                </div>
+            <div class="footer-form">
+                <h4>Para cualquier duda, por favor contacta con nosotros.</h4>
+                <form action="#">
+                    <input type="email" placeholder="Correo electrónico">
+                    <button type="submit">Enviar</button>
+                </form>
             </div>
         </div>
     </section>

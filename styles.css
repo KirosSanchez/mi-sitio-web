@@ -4,13 +4,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    box-sizing: border-box;
 }
 
-/* Barra de navegación */
+/* Barra de Navegación */
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 15px;
     background-color: #f8f8f8;
@@ -20,6 +19,7 @@ nav {
 .nav-logo img {
     width: 100px;
     height: auto;
+    margin-right: 20px;
 }
 
 .nav-links {
@@ -45,136 +45,95 @@ nav {
     color: #d68b3e;
 }
 
-.cart {
-    margin-left: 20px;
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-}
-
-.cart span {
-    margin-right: 8px;
-}
-
-.cart i {
-    font-size: 20px;
-    color: #333;
-}
-
-/* Sección de Bienvenida */
-#bienvenida {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    color: white;
-    position: relative;
-}
-
-.bienvenida-contenedor {
-    text-align: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-}
-
-.bienvenida-texto h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.bienvenida-texto p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-.boton {
-    background-color: #d68b3e;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 1.1rem;
-    border-radius: 5px;
-}
-
-.boton:hover {
-    background-color: #b8772f;
-}
-
-/* Sección de Productos */
-#productos {
+/* Sección de Proyectos */
+#proyectos {
     background-color: #fff;
     padding: 50px 20px;
     text-align: center;
 }
 
-#productos h2 {
+#proyectos h2 {
     font-size: 2rem;
-    margin-bottom: 10px;
-    color: #2e2e2e;
-}
-
-#productos p {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    color: #666;
-}
-
-.productos-contenedor {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.productos-tarjetas {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-/* Tarjetas de productos */
-.producto-card {
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 10px;
-    width: 32%;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.producto-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    margin-bottom: 15px;
-    border-radius: 8px;
-}
-
-.producto-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: #333;
 }
 
-.producto-card p {
+#proyectos p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+/* Estilo del Slider */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.slide-text {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.slide-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.slide-text p {
     font-size: 1rem;
-    color: #777;
-    margin-bottom: 15px;
 }
 
-.producto-card:hover {
-    transform: translateY(-5px);
+/* Controles del Slider */
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
 }
 
-/* Pie de Página */
+.prev, .next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Pie de página */
 #footer {
     background-color: #f1f1f1;
     padding: 40px 0;
@@ -239,28 +198,4 @@ nav {
 
 .footer-form button:hover {
     background-color: #b8772f;
-}
-
-/* Responsividad con Media Queries */
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .producto-card {
-        width: 100%;
-    }
-
-    .footer-content {
-        flex-direction: column;
-    }
-
-    .bienvenida-texto h1 {
-        font-size: 2rem;
-    }
-
-    .bienvenida-texto p {
-        font-size: 1rem;
-    }
 }
